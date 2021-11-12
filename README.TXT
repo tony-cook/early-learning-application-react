@@ -99,14 +99,14 @@ git push -u origin main
 
 
 Frontend developement
-
+Git clone https://github.com/Mission-Ready/missionX-frontend-2110L4T4.git
 
 
 
 
 
 Backend development
-
+**to be decided**
 
 
 
