@@ -8,8 +8,9 @@
 2. ABOUT
 3. FOLDER STRUCTURES
 4. BRANCH STRUCTURES
-5. GITHUB REPOSITORY PUSH COMMANDS
-6. GITHUB REPOSITORY CLONING COMMANDS
+5. GITHUB REPOSITORY PULL COMMANDS
+6. GITHUB REPOSITORY PUSH COMMANDS
+7. GITHUB REPOSITORY CLONING COMMANDS
 
 
 
@@ -21,6 +22,7 @@ Readme file for team Minimum Wagers Mission X Project Build.
 Make sure you are familiar with our Github repository by reading this file before you start using the team GitHub repository.
 Parts of this README file are subject to change and we will update it as we progress through our build.
 Any questions about Git commands should be checked before using Github.
+Make sure to NOTIFY ALL TEAM MEMBERS of any Github commits made as soon as possible!
 
 
 Top tips for your next commits
@@ -70,7 +72,7 @@ Back End
 **to be decided**
 
 
-****************************************4. GITHUB REPOSITORY PULL COMMANDS************************************
+****************************************5. GITHUB REPOSITORY PULL COMMANDS************************************
 ******************************USE THIS WHEN SOMEONE ELSE MAKES A COMMIT ON GITHUB(UPDATES)********************
 
 Frontend developement
@@ -84,7 +86,7 @@ git pull
 
 
 
-*******************************5. GITHUB REPOSITORY PUSH COMMANDS*********************************************
+*******************************6. GITHUB REPOSITORY PUSH COMMANDS*********************************************
 *************************USE THIS WHEN SAVING A NEW COMMIT TO GITHUB (SAVING)********************************
 
 Frontend developement
@@ -102,7 +104,7 @@ git push -u origin main
 
 
 
-****************************************6. GITHUB REPOSITORY CLONING COMMANDS *********************************
+****************************************7. GITHUB REPOSITORY CLONING COMMANDS *********************************
 *******************USE THIS WHEN STARTING A NEW DAY TO GET THE LATEST COPY FROM GITHUB(COPY)********************
 
 
