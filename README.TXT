@@ -70,13 +70,22 @@ Back End
 **to be decided**
 
 
+****************************************4. GITHUB REPOSITORY PULL COMMANDS************************************
+******************************USE THIS WHEN SOMEONE ELSE MAKES A COMMIT ON GITHUB(UPDATES)********************
+
+Frontend developement
+git pull
+
+
+Backend development
+git pull
 
 
 
 
 
-******************5. GITHUB REPOSITORY PUSH COMMANDS (remember to change the branch your using!!)*********************
-
+*******************************5. GITHUB REPOSITORY PUSH COMMANDS*********************************************
+*************************USE THIS WHEN SAVING A NEW COMMIT TO GITHUB (SAVING)********************************
 
 Frontend developement
 git remote add origin https://github.com/Mission-Ready/missionX-frontend-2110L4T4.git
@@ -93,15 +102,13 @@ git push -u origin main
 
 
 
-
-
-*******6. GITHUB REPOSITORY CLONING COMMANDS (Each new day, clone and use the github clone as a new file)********
+****************************************6. GITHUB REPOSITORY CLONING COMMANDS *********************************
+*******************USE THIS WHEN STARTING A NEW DAY TO GET THE LATEST COPY FROM GITHUB(COPY)********************
 
 
 Frontend developement
-Git clone https://github.com/Mission-Ready/missionX-frontend-2110L4T4.git
-
-
+git clone https://github.com/Mission-Ready/missionX-frontend-2110L4T4.git
+git remote https://github.com/Mission-Ready/missionX-frontend-2110L4T4.git
 
 
 
