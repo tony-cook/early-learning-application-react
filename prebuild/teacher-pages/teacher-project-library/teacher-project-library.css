@@ -119,14 +119,18 @@ input {
 
 /* Content section */
 
+/* Left side content section */
 .content-container {
   display: flex;
 }
 
 .content-left-container {
-  width: 544px;
+  width: 169px;
   margin-left: 255px;
   margin-top: 200px;
+  /* border-style: solid;
+  border-color: red;
+  border-width: 2px; */
 }
 hr {
   width: 169px;
@@ -151,4 +155,40 @@ hr {
   letter-spacing: 0.28px;
   color: #767676;
   opacity: 1;
+}
+
+/* Right side content section*/
+.content-right-container {
+  margin-top: 88px;
+  margin-left: 119px;
+}
+#main-heading {
+  text-align: left;
+  font: normal normal 900 42px/11px Nunito;
+  letter-spacing: 0.84px;
+  color: #6c6c6c;
+  opacity: 1;
+}
+
+#sub-heading {
+  margin-top: 20px;
+  text-align: left;
+  font: normal normal normal 20px/24px Open Sans;
+  letter-spacing: 0.4px;
+  color: #767676;
+  opacity: 1;
+}
+
+.filter-container {
+  display: flex;
+  margin-top: 59px;
+  text-align: left;
+  font: normal normal normal 16px/24px Open Sans;
+  letter-spacing: 0.32px;
+  color: #767676;
+  opacity: 1;
+}
+
+#filter-right-container {
+  margin-left: 450px;
 }
