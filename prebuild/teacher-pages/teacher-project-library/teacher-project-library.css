@@ -6,6 +6,9 @@ input {
   box-shadow: 0px 0.5px 1px #00000047;
   margin-right: 20px;
 }
+body {
+  width: 1920px;
+}
 
 /* Navigation Bar */
 
@@ -122,6 +125,7 @@ input {
 /* Left side content section */
 .content-container {
   display: flex;
+  width: 1920px;
 }
 
 .content-left-container {
@@ -161,17 +165,21 @@ hr {
 .content-right-container {
   margin-top: 88px;
   margin-left: 119px;
+  /* border-style: solid;
+  border-color: red;
+  border-width: 2px; */
 }
 #main-heading {
   text-align: left;
   font: normal normal 900 42px/11px Nunito;
   letter-spacing: 0.84px;
+  padding: 20px 0;
   color: #6c6c6c;
   opacity: 1;
 }
 
 #sub-heading {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: left;
   font: normal normal normal 20px/24px Open Sans;
   letter-spacing: 0.4px;
@@ -189,6 +197,53 @@ hr {
   opacity: 1;
 }
 
+#filter-left-container > button {
+  padding: 0 20px;
+}
+
 #filter-right-container {
-  margin-left: 450px;
+  margin-left: 580px;
+}
+
+#filter-right-container > button {
+  padding: 0 10px;
+}
+
+/* project showcase with images and titles (main title and subtitle) */
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 39px;
+  width: 1250px;
+  /* border-style: solid;
+  border-color: red;
+  border-width: 2px; */
+}
+
+.project-container-single {
+  padding-right: 96px;
+  width: 315px;
+  text-align: center;
+  /* border-style: solid;
+  border-color: red;
+  border-width: 2px; */
+}
+
+#project-title {
+  font: normal normal 800 30px/15px Nunito;
+  letter-spacing: 0.6px;
+  line-height: 30px;
+  color: #707070;
+  opacity: 1;
+  padding: 15px 0;
+}
+
+#project-info {
+  font: normal normal normal 20px/24px Open Sans;
+  letter-spacing: 0.4px;
+  color: #767676;
+  opacity: 1;
+  padding-bottom: 60px;
 }
