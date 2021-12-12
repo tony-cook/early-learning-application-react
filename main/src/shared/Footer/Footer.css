@@ -1,0 +1,43 @@
+.footer-container {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 0px;
+  width: 1920px;
+  height: 631px;
+  background: #b2e4fa 0% 0% no-repeat padding-box;
+  border: 1px solid #b2e4fa;
+  opacity: 1;
+}
+
+.text-group {
+  color: var(--unnamed-color-707070);
+  text-align: left;
+  font: normal normal normal 20px/32px Open Sans;
+  letter-spacing: 0.4px;
+  color: #707070;
+  opacity: 1;
+}
+
+#title {
+  color: var(--unnamed-color-707070);
+  text-align: left;
+  font: normal normal bold 24px/32px Nunito;
+  letter-spacing: 0.48px;
+  color: #707070;
+  opacity: 1;
+}
+
+.flexbox {
+  display: flex;
+  margin-left: 282px;
+  margin-top: 154px;
+  width: 1406px;
+  height: 285px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lg {
+  height: 285px;
+  width: 466px;
+}
