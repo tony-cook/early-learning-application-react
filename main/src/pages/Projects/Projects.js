@@ -17,7 +17,7 @@ function Projects() {
     
     const [profileName,setProfileName] = useState ("")
     const [profileImage,setProfileImage] = useState("")
-    const [projectsData,setProjectsData] = useState("")
+    const [projectsData,setProjectsData] = useState([])
 
     const [state,setState] = useState ({
         free: true,
@@ -63,7 +63,7 @@ function Projects() {
     };
 
       useEffect(() => {
-        axios.get(`http://localhost:4000/teacher/${id}/projects?subscription=free&subscription=premium&activity_type=animation&activity_type=game&activity_type=chatbot&activity_type=teacher&activity_type=augmentedreality&yearMin=1&yearMin=5&yearMin=7&yearMin=9&yearMax=4&yearMax=6&yearMax=8&yearMax=13&CSC=%CSC%&MAT=%MAT%&SCI=%SCI%&LAN=%LAN%&ART=%ART%&MUS=%MUS%&course=beginner&course=intermediate&course=advanced&showMax=5`)
+        axios.get(`http://localhost:4000/teacher/${id}/projects?subscription=free&subscription=premium&activity_type=animation&activity_type=game&activity_type=chatbot&activity_type=teacher&activity_type=augmentedreality&yearMin=1&yearMin=5&yearMin=7&yearMin=9&yearMax=4&yearMax=6&yearMax=8&yearMax=13&CSC=%CSC%&MAT=%MAT%&SCI=%SCI%&LAN=%LAN%&ART=%ART%&MUS=%MUS%&course=beginner&course=intermediate&course=advanced&showMax=10`)
         .then(res => {
           const response = res.data
           setProfileName(response[1][0].name)
