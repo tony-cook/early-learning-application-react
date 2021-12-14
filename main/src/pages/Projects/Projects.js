@@ -3,9 +3,10 @@ import {useState} from 'react'
 import './Projects.css';
 import NavBar from '../../shared/NavBar/NavBar'
 import Footer from '../../shared/Footer/Footer'
-import Checkboxes from './Checkboxes'
-import ContentHeading from './ContentHeading';
-import ButtonGroups from './ButtonGroups'
+import Checkboxes from './components/Checkboxes'
+import ContentHeading from './components/ContentHeading';
+import ButtonGroups from './components/ButtonGroups'
+import NavButtons from './components/NavButtons'
 
 function Projects() {
 
@@ -50,8 +51,7 @@ function Projects() {
             setShowResults(newResults);
           }
     };
-    console.log(courseLevel);
-    console.log(showResults);
+
     return (
         <div>
             <NavBar />
@@ -64,6 +64,7 @@ function Projects() {
                     <ButtonGroups courseLevel={courseLevel} showResults={showResults} handleCourseLevel={handleCourseLevel} handleShowResults={handleShowResults} />
                 </div>
             </div>
+            <NavButtons />
             <Footer />
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import './Projects.css';
+import '../Projects.css';
 
 
 function ButtonGroups({courseLevel, showResults, handleCourseLevel, handleShowResults}) {

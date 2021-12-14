@@ -1,3 +1,5 @@
+/* CSS related to Projects.js */
+
 .content-container {
   display: flex;
   flex-direction: row;
@@ -127,6 +129,25 @@ hr {
   border-width: 2px; */
 }
 
-.Button {
-  color: yellow;
+/* CSS related to NavButtons.js */
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 178px;
+  margin-left: 1219px;
+  margin-bottom: 155px;
+}
+.btn-to-top {
+  text-align: center;
+  width: 175px;
+  height: 35px;
+  font: normal normal 900 16px/22px Nunito;
+}
+.btn-to-dashboard {
+  margin-left: 60px;
+  width: 220px;
+  height: 35px;
+  text-align: center;
+  font: normal normal 900 16px/22px Nunito;
 }
