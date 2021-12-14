@@ -26,7 +26,7 @@ function Checkboxes({state, handleChange}) {
                 </div>
 
             <div className="checkbox-section">
-                <div className="checkbox-heading">Activity Type <br/><hr/></div>
+                <div className="checkbox-heading">ACTIVITY TYPE <br/><hr/></div>
                 <FormGroup className="checkbox-labels">
                     <FormControlLabel control={<Checkbox name="animation" checked={animation} onChange={handleChange}/>} label="Animation" /> <br/>
                     <FormControlLabel control={<Checkbox name="game" checked={game} onChange={handleChange} />} label="Game" /><br/>
@@ -36,7 +36,7 @@ function Checkboxes({state, handleChange}) {
             </div>
 
             <div className="checkbox-section">
-                <div className="checkbox-heading">Year Level <br/><hr/></div>
+                <div className="checkbox-heading">YEAR LEVEL <br/><hr/></div>
                 <FormGroup className="checkbox-labels">
                     <FormControlLabel control={<Checkbox name="yearLevel1" checked={yearLevel1} onChange={handleChange}/>} label="1 - 4" /> <br/>
                     <FormControlLabel control={<Checkbox name="yearLevel2" checked={yearLevel2} onChange={handleChange} />} label="5 - 6" /><br/>
@@ -46,7 +46,7 @@ function Checkboxes({state, handleChange}) {
             </div>
 
             <div className="checkbox-section">
-                <div className="checkbox-heading">Subject Matter <br/><hr/></div>
+                <div className="checkbox-heading">SUBJECT MATTER <br/><hr/></div>
                 <FormGroup className="checkbox-labels">
                     <FormControlLabel control={<Checkbox name="subjectCsc" checked={subjectCsc} onChange={handleChange}/>} label="Computer Science" /> <br/>
                     <FormControlLabel control={<Checkbox name="subjectMat" checked={subjectMat} onChange={handleChange} />} label="Maths" /><br/>

@@ -5,10 +5,10 @@ import './Projects.css';
 function ContentHeading() {
     return (
         <div>
-            <div id="main-heading">
+            <div className="main-heading">
                 PROJECTS <br/>
             </div>
-            <div id="sub-heading">
+            <div className="sub-heading">
                 Welcome to the project library. You can use the filters on the right to help you search for specific projects.
                 <br/>
             </div>

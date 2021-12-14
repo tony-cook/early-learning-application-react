@@ -27,7 +27,11 @@ function Projects() {
         subjectArt: true,
         subjectMus: true,
     })
- 
+
+    const [courseLevel, setCourseLevel] = useState("beginner");
+    const [showResults, setShowResults] = useState("1")
+
+
     const handleChange = (event) => {
         setState({
           ...state,
@@ -35,6 +39,19 @@ function Projects() {
         });
       };
 
+      const handleCourseLevel = (e, newCourse) => {
+        if (newCourse !== null) {
+            setCourseLevel(newCourse);
+          }
+    };
+
+    const handleShowResults = (e, newResults) => {
+        if (newResults !== null) {
+            setShowResults(newResults);
+          }
+    };
+    console.log(courseLevel);
+    console.log(showResults);
     return (
         <div>
             <NavBar />
@@ -44,7 +61,7 @@ function Projects() {
                 </div>
                 <div className="content-right-container">
                     <ContentHeading />
-                    <ButtonGroups />
+                    <ButtonGroups courseLevel={courseLevel} showResults={showResults} handleCourseLevel={handleCourseLevel} handleShowResults={handleShowResults} />
                 </div>
             </div>
             <Footer />

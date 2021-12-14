@@ -48,7 +48,7 @@ hr {
   border-width: 2px; */
 }
 
-#main-heading {
+.main-heading {
   text-align: left;
   font: normal normal 900 42px/11px Nunito;
   letter-spacing: 0.84px;
@@ -57,7 +57,7 @@ hr {
   opacity: 1;
 }
 
-#sub-heading {
+.sub-heading {
   margin-top: 15px;
   text-align: left;
   font: normal normal normal 20px/24px Open Sans;
@@ -109,6 +109,11 @@ hr {
 
 .filter-text {
   padding-right: 22px;
+  text-align: left;
+  font: normal normal normal 16px/24px Open Sans;
+  letter-spacing: 0.32px;
+  color: #767676;
+  opacity: 1;
 }
 
 .filter-right-container-buttons {
@@ -120,4 +125,8 @@ hr {
   /* border-style: solid;
   border-color: red;
   border-width: 2px; */
+}
+
+.Button {
+  color: yellow;
 }
