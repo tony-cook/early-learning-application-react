@@ -1,7 +1,6 @@
 import React from 'react'
 
 function ProjectsList({projectsData}) {
-    console.log(projectsData)
     return (
         <div className="project-container">
             {projectsData.map((project,index) => (
