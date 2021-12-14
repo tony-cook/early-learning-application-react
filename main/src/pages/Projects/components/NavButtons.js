@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import '../Projects.css';
 
-function NavButtons() {
+function NavButtons({useAxios}) {
 
     const scrollToTop = () => {
         window.scrollTo({

@@ -5,7 +5,7 @@ import NzFlag from '../../assets/images/NZ Flag@2x.png'
 import MaoriFlag from '../../assets/images/Maori flag@2x.png'
 
 
-function NavBar() {
+function NavBar({profileName,profileImage}) {
     return (
         <>
             <div className= "navbar-container">
@@ -22,8 +22,8 @@ function NavBar() {
                         <br />
                     </div>
                     <div className= "navbar-right-line2">
-                        <img id="profile-image" src="" alt="" />
-                        <div id="profile-name">ADD THESE PROPS FROM API</div>
+                        <img id="profile-image" src={profileImage} alt="" />
+                        <div id="profile-name">{profileName}</div>
                     </div>
                 </div>
             </div>
