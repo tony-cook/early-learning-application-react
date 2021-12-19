@@ -22,7 +22,7 @@ function ButtonGroups({courseLevel, showResults, handleCourseLevel, handleShowRe
                         style={{ fontWeight: 800 }}
                         color="primary"
                         size="small"  
-                        value="beginner" 
+                        value="beginner"
                         aria-label="beginner">
                                 BEGINNER
                     </ToggleButton>
@@ -54,7 +54,7 @@ function ButtonGroups({courseLevel, showResults, handleCourseLevel, handleShowRe
                         style={{ fontWeight: 800 }}
                         color="primary"
                         size="small"  
-                        value="advanced" 
+                        value="advanced"
                         aria-label="advanced">
                         ADVANCED
                     </ToggleButton>

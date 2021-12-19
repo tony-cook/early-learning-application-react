@@ -45,22 +45,41 @@ function Projects() {
         subjectArt: true,
         subjectMus: true,
     })
+    // const [stateCheckBoxValue,setStateCheckBoxValue] = useState ({
+    //     freeValue:"subscription=free",
+    //     premiumValue:"&subscription=premium",
+    //     animationValue:"&activity_type=animation",
+    //     gameValue:"&activity_type=game",
+    //     chatbotValue:"&activity_type=chatbot",
+    //     augmentedRealityValue:"&activity_type=augmentedreality",
+    //     yearLevel1Value:"&activity_type=yearMin=1&yearMax=4",
+    //     yearLevel2Value:"&yearMin=5&yearMax=6",
+    //     yearLevel3Value: "&yearMin=7&yearMax=8",
+    //     yearLevel4Value: "&yearMin=9&yearMax=13",
+    //     subjectCscValue: "&CSC=%CSC%",
+    //     subjectMatValue: "&MAT=%MAT%",
+    //     subjectSciValue: "&SCI=%SCI%",
+    //     subjectLanValue: "&LAN=%LAN%",
+    //     subjectArtValue: "&ART=%ART%",
+    //     subjectMusValue: "&MUS=%MUS%",
+    // })
+
+
 
 // Variables with useState hooks to store the users selected course level (beginner, intermediate or advanced) 
 // and the number of projects selected to be shown in the project library
 
     const [courseLevel, setCourseLevel] = useState("beginner");
-    const [showResults, setShowResults] = useState("1")
+    const [showResults, setShowResults] = useState("10")
 
 // Event handlers to update state variables using the useState hooks when the user 
 // interacts with a checkbox or button in the DOM
 
-    const handleChange = (event) => {
+    const handleChange = (event) => {      
         setState({
           ...state,
           [event.target.name]: event.target.checked,
         })
-       
       };
 
     const handleCourseLevel = (e, newCourse) => {
@@ -75,10 +94,39 @@ function Projects() {
           }
     };
 
-//Axios API to fetch profile information and project list from the backend server with the user id, and project variables
+//Axios API to fetch profile information and a detailed project list from the backend server with the user id and project type variables
 //updated from the state. useEffect hook will allow this to run each time there is an update to the selected state variables
+    const fetchApi = {
+        freeString: state.free ? "subscription=free" : "",
+        premiumString: state.premium ? "&subscription=premium" : "",
+        animationString: state.animation ? "&activity_type=animation" : "",
+        gameString: state.game ? "&activity_type=game" : "",
+        chatbotString: state.chatbot ? "&activity_type=chatbot" : "",
+        augmentedrealityString: state.augmentedreality ? "&activity_type=augmentedreality" : "",
+        yearLevel1String: state.yearLevel1 ? "&yearMin=1&yearMax=4" : "",
+        yearLevel2String: state.yearLevel2 ? "&yearMin=5&yearMax=6" : "",
+        yearLevel3String: state.yearLevel3 ? "&yearMin=7&yearMax=8" : "",
+        yearLevel4String: state.yearLevel4 ? "&yearMin=9&yearMax=13" : "",
+        subjectCscString: state.subjectCsc ? "&CSC=%CSC%" : "",
+
+
+        courseLevelString: courseLevel === "beginner" ? "&course=beginner" : courseLevel === "intermediate" ? "&course=intermediate" : "&course=advanced",
+        showResultsString: showResults === "1" ? "&showMax=1" : showResults === "5" ? "&showMax=5" : "&showMax=10"
+    }
+
+    //   useEffect(() => {
+    //     axios.get(`http://localhost:4000/teacher/${id}/projects?subscription=free&subscription=premium&activity_type=animation&activity_type=game&activity_type=chatbot&activity_type=teacher&activity_type=augmentedreality&yearMin=1&yearMin=5&yearMin=7&yearMin=9&yearMax=4&yearMax=6&yearMax=8&yearMax=13&CSC=%CSC%&MAT=%MAT%&SCI=%SCI%&LAN=%LAN%&ART=%ART%&MUS=%MUS%&course=beginner&course=intermediate&course=advanced&showMax=10`)
+    //     .then(res => {
+    //       const response = res.data
+    //       setProfileName(response[1][0].name)
+    //       setProfileImage(response[1][0].profile_pic)
+    //       setProjectsData(response[0])
+    //     })
+    //   }, [id,state,courseLevel,showResults])
+
       useEffect(() => {
-        axios.get(`http://localhost:4000/teacher/${id}/projects?subscription=free&subscription=premium&activity_type=animation&activity_type=game&activity_type=chatbot&activity_type=teacher&activity_type=augmentedreality&yearMin=1&yearMin=5&yearMin=7&yearMin=9&yearMax=4&yearMax=6&yearMax=8&yearMax=13&CSC=%CSC%&MAT=%MAT%&SCI=%SCI%&LAN=%LAN%&ART=%ART%&MUS=%MUS%&course=beginner&course=intermediate&course=advanced&showMax=10`)
+
+        axios.get(`http://localhost:4000/teacher/${id}/projects?${fetchApi.freeString}${fetchApi.premiumString}${fetchApi.animationString}${fetchApi.gameString}${fetchApi.chatbotString}${fetchApi.augmentedrealityString}${fetchApi.yearLevel1String}${fetchApi.yearLevel2String}${fetchApi.yearLevel3String}${fetchApi.yearLevel4String}${fetchApi.subjectCscString}&MAT=%MAT%&SCI=%SCI%&LAN=%LAN%&ART=%ART%&MUS=%MUS%${fetchApi.courseLevelString}${fetchApi.showResultsString}`)
         .then(res => {
           const response = res.data
           setProfileName(response[1][0].name)
@@ -87,7 +135,10 @@ function Projects() {
         })
       }, [id,state,courseLevel,showResults])
 
-    console.log(state, courseLevel,showResults);
+    useEffect(() => {
+        console.log(fetchApi.subjectCscString)
+    },[state,courseLevel,showResults])
+    
 
     return (
         <div>

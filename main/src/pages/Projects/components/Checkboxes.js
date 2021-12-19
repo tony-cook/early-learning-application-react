@@ -14,13 +14,12 @@ function Checkboxes({state, handleChange}) {
         subjectSci,subjectLan,subjectArt,
         subjectMus } = state;
 
-
     return (
         <div>
             <div className="checkbox-section">
                 <div className="checkbox-heading">SUBSCRIPTION <br/><hr/></div>
                 <FormGroup className="checkbox-labels">
-                    <FormControlLabel control={<Checkbox name="free" checked={free} onChange={handleChange}/>} label="Free" /> <br/>
+                    <FormControlLabel control={<Checkbox name="free" checked={free} onChange={handleChange} />} label="Free" /> <br/>
                     <FormControlLabel control={<Checkbox name="premium" checked={premium} onChange={handleChange} />} label="Premium" />
                 </FormGroup>
                 </div>
@@ -30,7 +29,7 @@ function Checkboxes({state, handleChange}) {
                 <FormGroup className="checkbox-labels">
                     <FormControlLabel control={<Checkbox name="animation" checked={animation} onChange={handleChange}/>} label="Animation" /> <br/>
                     <FormControlLabel control={<Checkbox name="game" checked={game} onChange={handleChange} />} label="Game" /><br/>
-                    <FormControlLabel control={<Checkbox name="chatbot" checked={chatbot} onChange={handleChange}/>} label="Chatbot" /> <br/>
+                    <FormControlLabel control={<Checkbox name="chatbot" checked={chatbot} onChange={handleChange} label="Chatbot"/>} label="Chatbot" /> <br/>
                     <FormControlLabel control={<Checkbox name="augmentedReality" checked={augmentedReality} onChange={handleChange} />} label="Augmented Reality" /><br/>
                 </FormGroup>
             </div>
