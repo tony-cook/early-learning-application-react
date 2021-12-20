@@ -1,11 +1,25 @@
 import React from 'react'
+import {useState} from 'react'
+import Button from '@mui/material/Button';
+
 import './NavBar.css';
 import StarLogo from '../../assets/images/Star Logo 07-2@2x.png'
 import NzFlag from '../../assets/images/NZ Flag@2x.png'
 import MaoriFlag from '../../assets/images/Maori flag@2x.png'
-
+import Popup from '../Popup/Popup'
 
 function NavBar({profileName,profileImage}) {
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+
+    const handleClick = (event) => {
+      setAnchorEl(event.target);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
     return (
         <>
             <div className= "navbar-container">
@@ -23,7 +37,10 @@ function NavBar({profileName,profileImage}) {
                     </div>
                     <div className= "navbar-right-line2">
                         <img id="profile-image" src={profileImage} alt="" />
-                        <div id="profile-name">{profileName}</div>
+                        <Button onClick={handleClick}>
+                            <div id="profile-name">{profileName}</div>
+                        </Button>
+                        <Popup handleClose={handleClose} open={open} anchorEl={anchorEl} />
                     </div>
                 </div>
             </div>

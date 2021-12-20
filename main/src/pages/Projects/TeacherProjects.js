@@ -123,7 +123,7 @@ function Projects() {
                         fetchApi.courseLevelString +
                         fetchApi.showResultsString)
 
-      useEffect(() => {
+    useEffect(() => {
         axios.get(`http://localhost:4000/teacher/${id}/projects?${fetchApiQuery}`)
         .then(res => {
           const response = res.data
