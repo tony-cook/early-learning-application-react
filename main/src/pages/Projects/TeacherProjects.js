@@ -45,25 +45,6 @@ function Projects() {
         subjectArt: true,
         subjectMus: true,
     })
-    // const [stateCheckBoxValue,setStateCheckBoxValue] = useState ({
-    //     freeValue:"subscription=free",
-    //     premiumValue:"&subscription=premium",
-    //     animationValue:"&activity_type=animation",
-    //     gameValue:"&activity_type=game",
-    //     chatbotValue:"&activity_type=chatbot",
-    //     augmentedRealityValue:"&activity_type=augmentedreality",
-    //     yearLevel1Value:"&activity_type=yearMin=1&yearMax=4",
-    //     yearLevel2Value:"&yearMin=5&yearMax=6",
-    //     yearLevel3Value: "&yearMin=7&yearMax=8",
-    //     yearLevel4Value: "&yearMin=9&yearMax=13",
-    //     subjectCscValue: "&CSC=%CSC%",
-    //     subjectMatValue: "&MAT=%MAT%",
-    //     subjectSciValue: "&SCI=%SCI%",
-    //     subjectLanValue: "&LAN=%LAN%",
-    //     subjectArtValue: "&ART=%ART%",
-    //     subjectMusValue: "&MUS=%MUS%",
-    // })
-
 
 
 // Variables with useState hooks to store the users selected course level (beginner, intermediate or advanced) 
@@ -105,31 +86,45 @@ function Projects() {
         animationString: state.animation ? "&activity_type=animation" : "",
         gameString: state.game ? "&activity_type=game" : "",
         chatbotString: state.chatbot ? "&activity_type=chatbot" : "",
-        augmentedrealityString: state.augmentedreality ? "&activity_type=augmentedreality" : "",
+        augmentedRealityString: state.augmentedReality ? "&activity_type=augmentedreality" : "",
+
         yearLevel1String: state.yearLevel1 ? "&yearMin=1&yearMax=4" : "",
         yearLevel2String: state.yearLevel2 ? "&yearMin=5&yearMax=6" : "",
         yearLevel3String: state.yearLevel3 ? "&yearMin=7&yearMax=8" : "",
         yearLevel4String: state.yearLevel4 ? "&yearMin=9&yearMax=13" : "",
+
         subjectCscString: state.subjectCsc ? "&CSC=%CSC%" : "",
-        
+        subjectMatString: state.subjectMat ? "&MAT=%MAT%" : "",
+        subjectSciString: state.subjectSci ? "&SCI=%SCI%" : "",
+        subjectLanString: state.subjectLan ? "&LAN=%LAN%" : "",
+        subjectArtString: state.subjectArt ? "&ART=%ART%" : "",
+        subjectMusString: state.subjectMus ? "&MUS=%MUS%" : "",
 
         courseLevelString: courseLevel === "beginner" ? "&course=beginner" : courseLevel === "intermediate" ? "&course=intermediate" : "&course=advanced",
         showResultsString: showResults === "1" ? "&showMax=1" : showResults === "5" ? "&showMax=5" : "&showMax=10"
     }
 
-    //   useEffect(() => {
-    //     axios.get(`http://localhost:4000/teacher/${id}/projects?subscription=free&subscription=premium&activity_type=animation&activity_type=game&activity_type=chatbot&activity_type=teacher&activity_type=augmentedreality&yearMin=1&yearMin=5&yearMin=7&yearMin=9&yearMax=4&yearMax=6&yearMax=8&yearMax=13&CSC=%CSC%&MAT=%MAT%&SCI=%SCI%&LAN=%LAN%&ART=%ART%&MUS=%MUS%&course=beginner&course=intermediate&course=advanced&showMax=10`)
-    //     .then(res => {
-    //       const response = res.data
-    //       setProfileName(response[1][0].name)
-    //       setProfileImage(response[1][0].profile_pic)
-    //       setProjectsData(response[0])
-    //     })
-    //   }, [id,state,courseLevel,showResults])
+    const fetchApiQuery = (fetchApi.freeString +
+                        fetchApi.premiumString +
+                        fetchApi.animationString +
+                        fetchApi.gameString +
+                        fetchApi.chatbotString +
+                        fetchApi.augmentedRealityString +
+                        fetchApi.yearLevel1String +
+                        fetchApi.yearLevel2String +
+                        fetchApi.yearLevel3String +
+                        fetchApi.yearLevel4String +
+                        fetchApi.subjectCscString +
+                        fetchApi.subjectMatString +
+                        fetchApi.subjectSciString +
+                        fetchApi.subjectLanString +
+                        fetchApi.subjectArtString +
+                        fetchApi.subjectMusString +
+                        fetchApi.courseLevelString +
+                        fetchApi.showResultsString)
 
       useEffect(() => {
-
-        axios.get(`http://localhost:4000/teacher/${id}/projects?${fetchApi.freeString}${fetchApi.premiumString}${fetchApi.animationString}${fetchApi.gameString}${fetchApi.chatbotString}${fetchApi.augmentedrealityString}${fetchApi.yearLevel1String}${fetchApi.yearLevel2String}${fetchApi.yearLevel3String}${fetchApi.yearLevel4String}${fetchApi.subjectCscString}&MAT=%MAT%&SCI=%SCI%&LAN=%LAN%&ART=%ART%&MUS=%MUS%${fetchApi.courseLevelString}${fetchApi.showResultsString}`)
+        axios.get(`http://localhost:4000/teacher/${id}/projects?${fetchApiQuery}`)
         .then(res => {
           const response = res.data
           setProfileName(response[1][0].name)
@@ -139,8 +134,8 @@ function Projects() {
       }, [id,state,courseLevel,showResults])
 
     useEffect(() => {
-        console.log(fetchApi.subjectCscString)
-    },[state,courseLevel,showResults])
+        console.log("TESTING AREA")
+    },[id,state,courseLevel,showResults])
     
 
     return (
