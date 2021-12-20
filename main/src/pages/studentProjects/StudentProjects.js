@@ -128,7 +128,7 @@ function StudentProjects() {
                         )
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/student/${studentId}/projects?${fetchApiQuery}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/student/${studentId}/projects?${fetchApiQuery}`)
         .then(res => {
         const response = res.data
         setProfileName(response[1][0].name)
