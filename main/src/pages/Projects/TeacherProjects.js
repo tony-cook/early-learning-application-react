@@ -1,6 +1,5 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import {useParams} from "react-router-dom"
 import axios from 'axios'
 
 import '../Projects/TeacherProjects.css'
@@ -14,9 +13,10 @@ import ProjectsList from './components/ProjectsList'
 
 function Projects() {
 
-// Variable found in the dynamic route to query the user information from the backend
+// Variable declared from a window prompt on pageload and stored in localStorage(line 137) to query the user information from the backend
 
-    const {id} = useParams()
+    const teacherId = localStorage.getItem('userIdTeacher')
+    const profileRoute = '/TeacherProfile'
 
 // Variables with useState hooks to store user name, user profile and 
 // project list for current list of projects shown in the project library
@@ -124,24 +124,36 @@ function Projects() {
                         fetchApi.showResultsString)
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/teacher/${id}/projects?${fetchApiQuery}`)
+        console.log(teacherId)
+        axios.get(`http://localhost:4000/teacher/${teacherId}/projects?${fetchApiQuery}`)
         .then(res => {
           const response = res.data
           setProfileName(response[1][0].name)
           setProfileImage(response[1][0].profile_pic)
           setProjectsData(response[0])
         })
-      }, [id,state,courseLevel,showResults])
+      }, [teacherId,state,courseLevel,showResults])
+
 
     useEffect(() => {
-        console.log("TESTING AREA")
-    },[id,state,courseLevel,showResults])
-    
+        localStorage.clear();
+        let userIdTeacher = prompt("Enter the teacher_id", "1")
+        if (userIdTeacher === null || userIdTeacher === "") {
+            let userIdStudent = prompt("Enter the student_id", "1")
+            alert(`You have logged in as student_id ${userIdStudent}`)
+            localStorage.setItem('userIdStudent', userIdStudent)
+          } else {
+            alert(`You have logged in as teacher_id ${userIdTeacher}`)
+            localStorage.setItem('userIdTeacher', userIdTeacher)
+          }
+    },[])
+
+
 
     return (
         <div>
             
-            <NavBar profileName={profileName} profileImage={profileImage}/>
+            <NavBar profileName={profileName} profileImage={profileImage} profileRoute={profileRoute}/>
             <div className="content-container">
                 <div className="content-left-container">
                     <Checkboxes state={state} handleChange={handleChange} />

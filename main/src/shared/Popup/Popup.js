@@ -1,10 +1,11 @@
 import React from 'react'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom'
 import './Popup.css';
 
 
-function Popup({handleClose, open, anchorEl}) {
+function Popup({handleClose, open, anchorEl,profileRoute}) {
 
     return (
         <div>
@@ -44,7 +45,7 @@ function Popup({handleClose, open, anchorEl}) {
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         <MenuItem style={{backgroundColor: '#FDF7D3', color: '#707070',font: 'normal normal 600 18px/30px Open Sans'}} >
-          My Profile
+        <Link to={profileRoute}>My Profile</Link>
         </MenuItem>
         <MenuItem style={{backgroundColor: '#FDF7D3', color: '#707070',font: 'normal normal 600 18px/30px Open Sans'}}>
           Settings

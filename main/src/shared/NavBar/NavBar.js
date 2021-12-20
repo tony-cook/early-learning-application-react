@@ -2,13 +2,14 @@ import React from 'react'
 import {useState} from 'react'
 import Button from '@mui/material/Button';
 
+
 import './NavBar.css';
 import StarLogo from '../../assets/images/Star Logo 07-2@2x.png'
 import NzFlag from '../../assets/images/NZ Flag@2x.png'
 import MaoriFlag from '../../assets/images/Maori flag@2x.png'
 import Popup from '../Popup/Popup'
 
-function NavBar({profileName,profileImage}) {
+function NavBar({profileName,profileImage,profileRoute}) {
 
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -40,7 +41,7 @@ function NavBar({profileName,profileImage}) {
                         <Button onClick={handleClick}>
                             <div id="profile-name">{profileName}</div>
                         </Button>
-                        <Popup handleClose={handleClose} open={open} anchorEl={anchorEl} />
+                        <Popup handleClose={handleClose} open={open} anchorEl={anchorEl} profileRoute={profileRoute} />
                     </div>
                 </div>
             </div>
