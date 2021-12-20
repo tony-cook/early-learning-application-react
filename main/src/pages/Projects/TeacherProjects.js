@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import {useParams} from "react-router-dom"
 import axios from 'axios'
 
-import './Projects.css';
+import '../Projects/TeacherProjects.css'
 import NavBar from '../../shared/NavBar/NavBar'
 import Footer from '../../shared/Footer/Footer'
 import Checkboxes from './components/Checkboxes'
@@ -95,7 +95,10 @@ function Projects() {
     };
 
 //Axios API to fetch profile information and a detailed project list from the backend server with the user id and project type variables
-//updated from the state. useEffect hook will allow this to run each time there is an update to the selected state variables
+//updated from the state. useEffect hook will allow this to run each time there is an update to the selected state variables.
+
+// fetchApi variable with conditional statement based on variables in the state, when true the URL string is added to the fetch API URL
+
     const fetchApi = {
         freeString: state.free ? "subscription=free" : "",
         premiumString: state.premium ? "&subscription=premium" : "",
@@ -108,7 +111,7 @@ function Projects() {
         yearLevel3String: state.yearLevel3 ? "&yearMin=7&yearMax=8" : "",
         yearLevel4String: state.yearLevel4 ? "&yearMin=9&yearMax=13" : "",
         subjectCscString: state.subjectCsc ? "&CSC=%CSC%" : "",
-
+        
 
         courseLevelString: courseLevel === "beginner" ? "&course=beginner" : courseLevel === "intermediate" ? "&course=intermediate" : "&course=advanced",
         showResultsString: showResults === "1" ? "&showMax=1" : showResults === "5" ? "&showMax=5" : "&showMax=10"
