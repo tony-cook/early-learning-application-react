@@ -1,15 +1,15 @@
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import './App.css';
-import StudentProjects from '../pages/Projects/StudentProjects'
+import StudentProjects from '../pages/StudentProjects/StudentProjects'
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-        <Route path="/student/projects" element={<StudentProjects />} />
-      </Routes>
+          <Route path="/student/projects" element={<StudentProjects />} />
+        </Routes>
       </BrowserRouter>
     </>
   );
