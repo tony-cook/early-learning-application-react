@@ -10,10 +10,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<StudentProfile />} />
+          <Route path='/StudentProfile' element={<StudentProfile />} />
+          <Route path='/TeacherProfile' element={<TeacherProfile />} />
+          <Route path='/StudentProjectBuilder' element={<StudentProjectBuilder />} />
           <Route path="/student/projects" element={<StudentProjects />} />
           <Route path="/teacher/projects" element={<TeacherProjects />} />
-      </Routes>
+        </Routes>
       </BrowserRouter>
     </>
   );
