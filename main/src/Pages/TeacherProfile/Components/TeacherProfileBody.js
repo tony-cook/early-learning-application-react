@@ -42,7 +42,7 @@ export default function StudentProfileHeader(props) {
                     <div className='main-box'>
 
                         <div className='main-left'>
-                            <img src="./Images/Teacher areas/Ellipse 38.png" /><br/>
+                            <img src="./Images/Teacher_areas/Ellipse 38.png" /><br/>
                             <button><a href=''>EDIT PROFILE</a></button>
                             <button><a href=''>CHANGE PHOTO</a></button>
                             <button><a href=''>SETTINGS</a></button>

@@ -1,9 +1,11 @@
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import './App.css';
-import StudentProjects from '../pages/studentProjects/StudentProjects'
-import TeacherProjects from '../pages/Projects/TeacherProjects'
-import StudentProfile from '../pages/StudentProfile/StudentProfile';
+import StudentProjects from '../Pages/studentProjects/StudentProjects'
+import TeacherProjects from '../Pages/Projects/TeacherProjects'
+import StudentProfile from '../Pages/StudentProfile/StudentProfile';
+import TeacherProfile from '../Pages/TeacherProfile/TeacherProfile';
+import StudentProjectBuilder from '../Pages/StudentProjectBuilder/StudentProjectBuilder'
 
 function App() {
   return (

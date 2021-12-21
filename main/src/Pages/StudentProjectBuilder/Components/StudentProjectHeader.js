@@ -6,7 +6,7 @@ export default function StudentProjectHeader() {
     return (
         <div className='project-header'>
             <div className='header-one'>
-                    <a href='#'><img src='Images/Student Areas/levelUpLogo.png' /></a>
+                    <a href='#'><img src='Images/Student_Areas/levelUpLogo.png' /></a>
                 </div>
                 <div className='header-two'>
                     <div className='header-box-left'>
