@@ -1,12 +1,13 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import './CSS/StudentProfileBody.css'
+import './StudentProfileBody.css'
 
-export default function StudentProfileHeader() {
+export default function StudentProfileHeader(props) {
 
-    const teacherID = 2 //====== SET STUDENT ID HERE
+    const teacherID = (props.id) //====== SET STUDENT ID HERE
     const teacherProfile = `http://localhost:4000/teachersProfile/${teacherID}`
+    // not secure "https", s needed to be removed
     
     const [contactNumber, setContactNumber] = useState('Contact Number')
     const [date_of_birth, setDate_of_birth] = useState('Date of Birth')

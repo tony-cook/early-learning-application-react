@@ -1,20 +1,19 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
-import './CSS/StudentProfileHeader.css'
+import './StudentProfileHeader.css'
 import axios from 'axios'
 
-export default function StudentProfileHeader() {
+export default function StudentProfileHeader(prop) {
 
-    const studentID = 2 //====== SET STUDENT ID HERE
-    const studentPofile = `http://localhost:4000/studentProfile/${studentID}`
+    const teacherID = (prop.id) //====== SET STUDENT ID HERE
+    const teacherProfile = `http://localhost:4000/teachersProfile/${teacherID}`
     
-    const [student, setStudent] = useState('Student')
+    const [teacher, setTeacher] = useState('Teacher')
 
-    axios.get(studentPofile)
+    axios.get(teacherProfile)
     .then(res => {
-        // console.log(res);
-        
-        setStudent(res.data[0].student_name)
+        console.log(res);
+        setTeacher(res.data[0].name)
     })
 
     return (
@@ -22,13 +21,13 @@ export default function StudentProfileHeader() {
                 <div className='header'>
                     
                     <div className='header-box-one'>
-                        <Link to='/StudentProject'><img src="./Images/Home/Star Logo 07-2.png" /></Link>
+                        <img src="./Images/Home/Star Logo 07-2.png" />
                     </div>
 
                     <div className='header-box-two'>
                         <a href="#" onmousedown="click()" onclick="click()">HOME</a>
                         <a href="#">PROJECTS</a>
-                        <Link to='/TeacherProfile'><a href="#">TEACHERS</a></Link>
+                        <a href="#">TEACHERS</a>
                     </div>
 
                     <div className='header-box-three'>
@@ -40,8 +39,8 @@ export default function StudentProfileHeader() {
 
                             <div className='header-profile-box'>
                                 
-                                <img src="./Images/Student Areas/Ellipse 38.png" className='smallProfile' />
-                                <span className='profileStudentName'>{student}</span>
+                                <img src="./Images/teacher Areas/Ellipse 38.png" className='smallProfile' />
+                                <span className='profileStudentName'>{teacher}</span>
                             </div>
 
                         </div>
