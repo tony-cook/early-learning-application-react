@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import './StudentProfileHeader.css'
 import axios from 'axios'
 
-export default function StudentProfileHeader() {
+export default function TeacherProfileHeader() {
 
     const teacherID = localStorage.getItem('teacherID') //====== Teacher ID being pulled from localstorage
     const teacherProfile = `http://localhost:4000/teachersProfile/${teacherID}`
