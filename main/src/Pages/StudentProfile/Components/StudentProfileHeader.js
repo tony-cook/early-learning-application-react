@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 import './StudentProfileHeader.css'
 import axios from 'axios'
 
-export default function StudentProfileHeader(props) {
+export default function StudentProfileHeader() {
 
-    const studentID = (props.id) //====== SET STUDENT ID HERE
+    const studentID = localStorage.getItem('studentID')
     const studentPofile = `http://localhost:4000/studentProfile/${studentID}`
     
     const [student, setStudent] = useState('Student')
