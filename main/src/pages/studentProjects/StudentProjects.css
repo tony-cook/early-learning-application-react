@@ -1,0 +1,190 @@
+/* CSS related to Projects.js */
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  width: 1920px;
+}
+
+/* CSS related to Checkboxes.js */
+
+.content-left-container {
+  width: 200px;
+  margin-left: 255px;
+  margin-top: 195px;
+  /* border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+}
+hr {
+  width: 169px;
+  margin-left: 0;
+  border: 1px solid #707070;
+  opacity: 1;
+}
+.checkbox-section {
+  margin-top: 50px;
+}
+
+.checkbox-heading {
+  text-align: left;
+  font: normal normal normal 16px/24px Open Sans;
+  letter-spacing: 0.32px;
+  color: #767676;
+  opacity: 1;
+}
+.checkbox-labels {
+  text-align: left;
+  font: normal normal normal 14px/24px Open Sans;
+  letter-spacing: 0.28px;
+  color: #767676;
+  opacity: 1;
+}
+/* CSS related to ContentHeading.js */
+
+.content-right-container {
+  margin-top: 88px;
+  margin-left: 119px;
+  /* border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+}
+
+.main-heading {
+  text-align: left;
+  font: normal normal 900 42px/11px Nunito;
+  letter-spacing: 0.84px;
+  padding: 20px 0;
+  color: #6c6c6c;
+  opacity: 1;
+}
+
+.sub-heading {
+  margin-top: 15px;
+  text-align: left;
+  font: normal normal normal 20px/24px Open Sans;
+  letter-spacing: 0.4px;
+  color: #767676;
+  opacity: 1;
+}
+
+/* CSS related to ButtonGroups.js */
+
+.filter-container {
+  display: flex;
+  margin-top: 59px;
+  text-align: left;
+  font: normal normal normal 16px/24px Open Sans;
+  letter-spacing: 0.32px;
+  color: #767676;
+  opacity: 1;
+  /* border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+}
+.filter-left-container {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 348px;
+  height: 30px;
+  font: normal normal normal 13px/18px Open Sans;
+  letter-spacing: -0.07px;
+  color: #ffffff;
+  opacity: 1;
+  /* border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+}
+
+.filter-right-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 580px;
+  text-align: left;
+  font: normal normal normal 16px/24px Open Sans;
+  letter-spacing: 0.32px;
+  color: #767676;
+  opacity: 1;
+}
+
+.filter-text {
+  padding-right: 22px;
+  text-align: left;
+  font: normal normal normal 16px/24px Open Sans;
+  letter-spacing: 0.32px;
+  color: #767676;
+  opacity: 1;
+}
+
+.filter-right-container-buttons {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 155px;
+  height: 30px;
+  /* border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+}
+
+/* CSS related to NavButtons.js */
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 178px;
+  margin-left: 1219px;
+  margin-bottom: 155px;
+}
+.btn-to-top {
+  text-align: center;
+  width: 175px;
+  height: 35px;
+  font: normal normal 900 16px/22px Nunito;
+}
+.btn-to-dashboard {
+  margin-left: 60px;
+  width: 220px;
+  height: 35px;
+  text-align: center;
+  font: normal normal 900 16px/22px Nunito;
+}
+
+/* CSS related to ProjectsList.js */
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 39px;
+  width: 1250px;
+  /* border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+}
+
+.project-container-single {
+  padding-right: 96px;
+  width: 315px;
+  text-align: center;
+  /* border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+}
+
+.project-title {
+  font: normal normal 800 30px/15px Nunito;
+  letter-spacing: 0.6px;
+  line-height: 30px;
+  color: #707070;
+  opacity: 1;
+  padding: 15px 0;
+}
+
+.project-info {
+  font: normal normal normal 20px/24px Open Sans;
+  letter-spacing: 0.4px;
+  color: #767676;
+  opacity: 1;
+  padding-bottom: 60px;
+}
