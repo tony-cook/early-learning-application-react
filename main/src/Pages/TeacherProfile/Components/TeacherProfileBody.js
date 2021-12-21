@@ -5,7 +5,7 @@ import './StudentProfileBody.css'
 
 export default function StudentProfileHeader(props) {
 
-    const teacherID = (props.id) //====== SET STUDENT ID HERE
+    const teacherID = localStorage.getItem('teacherID') //====== Teacher ID being pulled from localstorage
     const teacherProfile = `http://localhost:4000/teachersProfile/${teacherID}`
     // not secure "https", s needed to be removed
     
@@ -15,14 +15,6 @@ export default function StudentProfileHeader(props) {
     const [email, setEmail] = useState('Teacher Email')
     const [school, setSchool] = useState('School')
     const [teacher, setTeacher] = useState('Teacher')
-    // const [student, setStudent] = useState('Teacher Profile')
-
-    // contact_number: "(026) 4465-010"
-    // course: "Beginner"
-    // date_of_birth: "2000 March 24th"
-    // email: "PearlPHall@dayrep.com"
-    // name: "Pearl Hall"
-    // school: "Kristin School"
 
     axios.get(teacherProfile)
     .then(res => {
