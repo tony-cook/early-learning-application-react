@@ -40,7 +40,7 @@ export default function StudentProfileHeader(props) {
 
                             <div className='header-profile-box'>
                                 
-                                <img src="./Images/Student Areas/Ellipse 38.png" className='smallProfile' />
+                                <img src="./Images/Student_Areas/Ellipse 38.png" className='smallProfile' />
                                 <span className='profileStudentName'>{student}</span>
                             </div>
 
