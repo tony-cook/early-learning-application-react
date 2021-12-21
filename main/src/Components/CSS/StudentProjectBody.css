@@ -1,0 +1,166 @@
+.body-box-body{
+    /* border: 1px solid yellow; */
+    min-height: 100px;
+    margin: auto;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 0.28px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+}
+
+.middle-left{
+    background-color: #43C0F6;
+    display: flex;
+    flex-direction: column;
+    
+    /* border: 1px solid blue; */
+    min-width: 220px; /*This sets the width of the left nav*/
+    min-height: 700px;
+}
+
+.nav-links{
+    font-size: 12px;
+        /* border: 1px solid green; */
+}
+
+.links img{
+    height: 30px;
+    padding: 5px 5px 5px 10px;
+}
+
+.arrow-box{
+    display: flex;
+    /* border:1px solid red; */
+    justify-content: flex-end;
+}
+
+.arrow{
+    border:1px solid #B2E4FA;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #B2E4FA;
+}
+
+.nav-links a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    border:1px solid #43C0F6;
+    font-weight: bold;
+}
+
+.nav-links a:focus{
+    background-color: #B2E4FA;
+    border: 1px solid #B2E4FA;
+    color: #707070;
+}
+
+.profile-picture{
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.bottom-nav{
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.bottom-nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+
+.bottom-nav-link{
+    /* border:1px solid red; */
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* ------------RIGHT SECTION OF BODY BELOW */
+
+.middle-right{
+    display: flex;
+    /* border: 1px solid red; */
+    background-color: #B2E4FA;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-right-box{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: #FFFFFF80;
+    /* border: 2px solid green; */
+    border-radius: 30px;
+    width: 90%;
+    height: 90%;
+}
+
+/* ============ styling for middle content box */
+
+.middle-content-box{
+    font-family:Arial, Helvetica, sans-serif;
+    /* border: 1px solid red; */
+    color: #707070;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* width: 90%;
+    height: 90%; */
+}
+
+.middle-content-box-images{
+    margin: 10px;
+    display: flex;
+    /* width: 70%; */
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.small-img-resize{
+    height: 20%;
+    width: 70%;
+    /* border: 1px solid green; */
+}
+
+.double-image{
+    display: flex;
+    flex-direction:column;
+    /* border: 1px solid red; */
+    width: 15%;
+}
+
+.dbl-small-img-resize{
+    border: 1px solid pink;
+    /* width: 50%; */
+}
+
+.dbl-small-img-resize-small{
+    width: 15%;
+    height: 15%;
+}
+
+.big-img-resize{
+    width: 15%;
+    /* border: 1px solid red; */
+}
+
+/* .block{
+    border: 1px solid red;
+} */
+
+.content-pic{
+    /* border: 1px solid red; */
+    padding: 70px 0px 0px 0px ;
+    margin: 0px 0px 0px 0px ;
+    width: 100%;
+}
