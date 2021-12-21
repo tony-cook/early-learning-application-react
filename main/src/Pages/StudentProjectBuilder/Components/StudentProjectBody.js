@@ -8,8 +8,7 @@ export default function StudentProjectBody(props) {
 
     const [contentBox, setContentBox] = useState('SELECT an option from the left tab')
 
-    const studentID = (props.id) //====== SET STUDENT ID HERE (9 is best)
-    // const studentProfile = `http://localhost:4000/studentProjectBuilder/instructions/${studentID}`
+    const studentID = localStorage.getItem('studentID') //9 is lucky
     const studentProfile = `http://localhost:4000/studentProject/${studentID}`
 
     function learningObjectives(){
