@@ -1,5 +1,5 @@
 Project Name:
-Early Learning Web Application
+Early Learning Web Application (Frontend)
 
 Project Details:
 *Developed a full stack application with React/Redux frontend and Node.js, SQL backend for early learning.
